@@ -1,16 +1,14 @@
 <template>
-  <div id="app">
-  </div>
+  <manage-products></manage-products>
 </template>
 
 <script>
+import ManageProducts from './components/ManageProducts';
 
 export default {
   name: 'app',
   components: {
+    ManageProducts,
   },
 };
 </script>
-
-<style>
-</style>
