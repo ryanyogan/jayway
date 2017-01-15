@@ -3,6 +3,10 @@
 import Vue from 'vue';
 import App from './App';
 
+import './styles/style.scss';
+
+import '../node_modules/bootstrap/dist/js/bootstrap';
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
