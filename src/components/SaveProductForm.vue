@@ -34,7 +34,10 @@
       />
     </div>
     <button type="submit" @click.prevent="onSubmit" class="btn btn-primary">
-      Save product
+      {{ product.id ? 'Update' : 'Save' }} product
+    </button>
+    <button v-if="product.id" @click.prevent="onCancel" class="btn btn-secondary">
+      Cancel
     </button>
 </template>
 
@@ -44,6 +47,9 @@ export default {
   methods: {
     onSubmit() {
       this.$emit('submit', this.product);
+    },
+    onCancel() {
+      this.$emit('cancel');
     },
   },
 };

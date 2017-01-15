@@ -2,6 +2,7 @@
   <section> <save-product-form
       :product="productInForm"
       v-on:submit="onFormSave"
+      v-on:cancel="onCancelClicked"
     ></save-product-form>
     <product-list
       :products="products"
@@ -67,6 +68,9 @@ export default {
     },
     onEditClicked(product) {
       this.productInForm = { ...product };
+    },
+    onCancelClicked() {
+      this.resetProductInForm();
     },
     resetProductInForm() {
       this.productInForm = initialData().productInForm;
